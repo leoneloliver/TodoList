@@ -22,7 +22,7 @@ var ToDoList = React.createClass({
     }
   },
   getTodos:function(){
-    var todos = localStorage.getItem('todosJKqGKb');
+    var todos = localStorage.getItem('todoListZX098T00');
     var setTodayDate = this.getToday();
     try{
       if(Array.isArray(JSON.parse(todos))){
