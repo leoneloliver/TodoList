@@ -71,8 +71,8 @@ var ToDoList = React.createClass({
         <AddNew addtodo={this.handleKeyPress} />
           <TodayList todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
           <OverdueList todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
-          <div onClick={this.handleOpen}>
-            Add new +
+          <div onClick={this.handleOpen} className="btn-plus">
+            +
           </div>
         </div>
     );
