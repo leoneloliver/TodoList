@@ -11,9 +11,13 @@ var ToDoList = React.createClass({
     var date = today.getFullYear() + '-' + monthy + '-' + today.getDate();
     return date;
   },
+  getQuantity: function(){
+    alert(document.getElementsByClassName("olist").length);
+  }
   
   getInitialState:function(){
     var localtodos = this.getTodos();
+    this.getQuantity();
     return { 
       todos: localtodos,
       hide_archived:true,
@@ -51,10 +55,6 @@ var ToDoList = React.createClass({
   },
   toggle:function(todoid){
     this.state.todos[todoid][1] = !this.state.todos[todoid][1];
-    this.state.todos[todoid][2] = !this.state.todos[todoid][2];
-    this.forceUpdate();
-  },
-  toggleVisibility:function(todoid){
     this.state.todos[todoid][2] = !this.state.todos[todoid][2];
     this.forceUpdate();
   },
@@ -130,13 +130,10 @@ var OverdueList = React.createClass({
   toggleToDo:function(i){
     this.props.toggle(i);
   },
-  toggleVisibility:function(i){
-    this.props.toggleVisibility(i);
-  },
   render:function(){
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
-        <h1>Overduo</h1>
+        <h1>Overdue</h1><span className="qolist"></span>
         {
           this.props.todos.map(function(todo,index){
             var today = new Date();
@@ -180,13 +177,10 @@ var TodayList = React.createClass({
   toggleToDo:function(i){
     this.props.toggle(i);
   },
-  toggleVisibility:function(i){
-    this.props.toggleVisibility(i);
-  },
   render:function(){
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
-        <h1>Today</h1>
+        <h1>Today</h1><span className="qtlist"></span>
         {
           this.props.todos.map(function(todo,index){          
             var today = new Date();
