@@ -28,7 +28,8 @@ var ToDoList = React.createClass({
          return JSON.parse(todos);   
       }else{
         return [
-          ['First item',false,false,setTodayDate],
+          ['Review all tests',false,false,setTodayDate],
+          ['Enjoying life',false,false,"2019-05-15"],
           
         ];
       }
@@ -85,7 +86,7 @@ var AddNew = React.createClass({
     if(this.refs.addNew.value.trim().length > 0 && this.refs.dateNew.value.trim().length > 0){
       this.props.addtodo(this.refs.addNew.value);
       
-      alert(this.refs.addNew.value);
+      console.log("inserting: "+this.refs.addNew.value);
       document.getElementById('add-container').style.display = "none";
       this.refs.addNew.value = '';
     }
