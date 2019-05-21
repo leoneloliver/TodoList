@@ -128,6 +128,9 @@ var OverdueList = React.createClass({
   getQuantity: function(){
     alert(document.getElementsByClassName("qlist").length);
   },
+  setTimeout(function(){
+    this.getQuantity();
+  },2000),
   render:function(){
     
     return (
@@ -166,7 +169,7 @@ var OverdueList = React.createClass({
       </div>
     );
   }
-  this.getQuantity();
+  
   
 });
 
