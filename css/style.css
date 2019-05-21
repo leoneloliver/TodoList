@@ -232,15 +232,17 @@ input.input-text-task {
   box-shadow: 1px 3px 4px #c5c5c5;
   margin-bottom: 12px;
 }
-.btn-plus{
+.btn-plus {
   width: 45px;
-  margin: -65px auto;
-  background: #ccc;
+  margin: -96px auto;
+  background: #e6e6e6;
   height: 45px;
   text-align: center;
   border-radius: 50px;
   cursor: pointer;
-  border: 1px solid;
+  border: 1px solid #2b9dff;
+  color: #2b9dff;
+  font-size: 1em;
 }
 /* Keyframes for initial animation */
 @keyframes strikethrough {
