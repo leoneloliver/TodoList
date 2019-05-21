@@ -129,6 +129,7 @@ var OverdueList = React.createClass({
     alert(document.getElementsByClassName("qlist").length);
   },
   render:function(){
+    
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
         <h1>Overdue</h1><span className="qolist"></span>
@@ -163,8 +164,9 @@ var OverdueList = React.createClass({
         </div>
       </div>
     );
+    this.getQuantity();
   }
-  this.getQuantity();
+  
 });
 
 
