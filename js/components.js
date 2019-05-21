@@ -163,8 +163,6 @@ var TodayList = React.createClass({
               var monthy = (today.getMonth() + 1);
             }
             var date = today.getFullYear() + '-' + monthy + '-' + today.getDate();
-            console.log(todo[3]);
-            console.log(date);
             if(todo[3] >= date){
             return (
               <div id={"todo"+index} className={"todo clearfix tlist " + (todo[2] ? "archived " : "") + (todo[1] ? "done" : "")}>
