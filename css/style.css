@@ -204,6 +204,7 @@ body section .visibility_control label {
   font-size: 0.9em;
   background: #fff;
   z-index: 9;
+  display: none;
 }
 
 input.input-text-task {

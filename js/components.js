@@ -65,7 +65,7 @@ var ToDoList = React.createClass({
     });
   },
   handleOpen:function(){
-    alert();
+    document.getElementById('add-container').style.display = "block";
   },
   render:function(){
     var dt = new Date();
