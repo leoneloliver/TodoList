@@ -106,7 +106,14 @@ var OverdueList = React.createClass({
   },
   render:function(){
     setTimeout(function(){
-      document.getElementById("qolist").innerHTML = document.getElementsByClassName("olist").length;
+      var elem = document.getElementsByClassName("tlist");
+      let nOver = 0
+      for(let i = 0; i < elem.length ; i++){
+        if(elem[i].checked == false){
+          nToday++;
+        }
+      }
+      document.getElementById("qolist").innerHTML = nOver;
     },500);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
@@ -149,13 +156,13 @@ var TodayList = React.createClass({
   render:function(){
     setTimeout(function(){
       var elem = document.getElementsByClassName("tlist");
-      let over = 0
+      let nToday = 0
       for(let i = 0; i < elem.length ; i++){
         if(elem[i].checked == false){
-          over++;
+          nToday++;
         }
       }
-      document.getElementById("qtlist").innerHTML = over;
+      document.getElementById("qtlist").innerHTML = nToday;
     },500);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
