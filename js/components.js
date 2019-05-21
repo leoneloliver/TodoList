@@ -1,5 +1,4 @@
 var ToDoList = React.createClass({
-  
   getToday:function(){
     var today = new Date();
     var monthy;
@@ -15,9 +14,7 @@ var ToDoList = React.createClass({
     var localtodos = this.getTodos();
     return { 
       todos: localtodos,
-      hide_archived:true,
-      
-      
+      hide_archived:true, 
     }
   },
   getTodos:function(){
@@ -29,8 +26,7 @@ var ToDoList = React.createClass({
       }else{
         return [
           ['Review all tests',false,false,setTodayDate],
-          ['Enjoying life',false,false,"2019-05-15"],
-          
+          ['Enjoying life',false,false,"2019-05-15"],      
         ];
       }
     } catch(e){
@@ -65,27 +61,23 @@ var ToDoList = React.createClass({
   render:function(){
     return (
       <div>
-      <header className="clearfix">
-        <h4>My To Do APP</h4>
-       
-      </header>
-        <AddNew addtodo={this.handleKeyPress} />
+        <header className="clearfix">
+          <h4>My To Do APP</h4>
+        </header>
+          <AddNew addtodo={this.handleKeyPress} />
           <TodayList todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
           <OverdueList todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
           <div onClick={this.handleOpen} className="btn-plus">
-            +
+              +
           </div>
         </div>
     );
   }
 });
-
 var AddNew = React.createClass({
   handleKeyPress:function(evt){
-    
     if(this.refs.addNew.value.trim().length > 0 && this.refs.dateNew.value.trim().length > 0){
-      this.props.addtodo(this.refs.addNew.value);
-      
+      this.props.addtodo(this.refs.addNew.value);  
       console.log("inserting: "+this.refs.addNew.value);
       document.getElementById('add-container').style.display = "none";
       this.refs.addNew.value = '';
@@ -104,14 +96,10 @@ var AddNew = React.createClass({
         <div className="task-box">
           <input type="button" onClick={this.handleKeyPress} value="add" className="btn-add" />
         </div>
- 
-       
       </div>
     );
   }
 });
-
-
 var OverdueList = React.createClass({
   show_hide_archived:function(){
     this.props.show_hide_archived();
@@ -122,7 +110,7 @@ var OverdueList = React.createClass({
   render:function(){
     setTimeout(function(){
       document.getElementById("qolist").innerHTML = document.getElementsByClassName("olist").length;
-    },2000);
+    },1000);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
         <h1>Overdue - <span id="qolist"></span> Tasks</h1>
@@ -136,20 +124,13 @@ var OverdueList = React.createClass({
             }
             var date = today.getFullYear() + '-' + monthy + '-' + today.getDate();
             if(todo[3] < date){
-            return (
-              
+            return (            
               <div id={"todo"+index} className={"todo clearfix olist " + (todo[2] ? "archived " : "") + (todo[1] ? "done" : "")}>
-                
-               
                 <input className="status" onChange={this.toggleToDo.bind(this,index)} ref="todoid" id={index} checked={todo[1] ? "checked" : ""} type="checkbox" />
                 <label htmlFor={index}><span className={todo[1] ? "strikethrough" : ""}>{todo[0]}{todo[1]}{todo[2]}</span><div className="right">{todo[3]}</div></label>
-              </div>
-                       
+              </div>                      
               );
-
-            }
-            
-           
+            }    
           },this)
         }
         <div className="visibility_control">
@@ -159,11 +140,7 @@ var OverdueList = React.createClass({
       </div>
     );
   }
-  
-  
 });
-
-
 
 var TodayList = React.createClass({
   show_hide_archived:function(){
@@ -175,7 +152,7 @@ var TodayList = React.createClass({
   render:function(){
     setTimeout(function(){
       document.getElementById("qtlist").innerHTML = document.getElementsByClassName("tlist").length;
-    },2000);
+    },1000);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
         <h1>Today - <span id="qtlist"></span> Tasks</h1>
@@ -192,24 +169,18 @@ var TodayList = React.createClass({
             console.log(date);
             if(todo[3] >= date){
             return (
-              
               <div id={"todo"+index} className={"todo clearfix tlist " + (todo[2] ? "archived " : "") + (todo[1] ? "done" : "")}>
-                
                 <input className="status" onChange={this.toggleToDo.bind(this,index)} ref="todoid" id={index} checked={todo[1] ? "checked" : ""} type="checkbox" />
                 <label htmlFor={index}><span className={todo[1] ? "strikethrough" : ""}>{todo[0]}{todo[1]}{todo[2]}</span><div className="right">{todo[3]}</div></label>
               </div>
-           
-              
               );
             }
           },this)
         }
-        
       </div>
     );
   }
 });
-
 ReactDOM.render(
   <ToDoList/>,
   document.getElementById('todolist')
