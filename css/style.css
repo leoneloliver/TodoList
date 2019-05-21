@@ -89,7 +89,7 @@ body section .listbox .todo label {
   float: left;
   cursor: pointer;
   position: relative;
-  width: 90%;
+  width: 100%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -226,7 +226,12 @@ input.input-text-task {
   cursor: pointer;
   
 }
-
+.todo{
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 1px 3px 4px #c5c5c5;
+  margin-bottom: 12px;
+}
 /* Keyframes for initial animation */
 @keyframes strikethrough {
   from {
