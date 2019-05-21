@@ -128,11 +128,11 @@ var OverdueList = React.createClass({
   getQuantity: function(){
     alert(document.getElementsByClassName("qlist").length);
   },
-  setTimeout(function(){
-    this.getQuantity();
-  },2000),
+  
   render:function(){
-    
+    setTimeout(function(){
+      this.getQuantity();
+    },2000);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
         <h1>Overdue</h1><span className="qolist"></span>
