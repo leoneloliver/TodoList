@@ -110,7 +110,7 @@ var OverdueList = React.createClass({
   render:function(){
     setTimeout(function(){
       document.getElementById("qolist").innerHTML = document.getElementsByClassName("olist").length;
-    },1000);
+    },500);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
         <h1>Overdue - <span id="qolist"></span> Tasks</h1>
@@ -152,7 +152,7 @@ var TodayList = React.createClass({
   render:function(){
     setTimeout(function(){
       document.getElementById("qtlist").innerHTML = document.getElementsByClassName("tlist").length;
-    },1000);
+    },500);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
         <h1>Today - <span id="qtlist"></span> Tasks</h1>
