@@ -149,7 +149,7 @@ var OverdueList = React.createClass({
             if(todo[3] < date){
             return (
               
-              <div id={"todo"+index} className={"todo clearfix olist" + (todo[2] ? "archived " : "") + (todo[1] ? "done" : "")}>
+              <div id={"todo"+index} className={"todo clearfix olist " + (todo[2] ? "archived " : "") + (todo[1] ? "done" : "")}>
                 
                 <input className="visibility" onChange={this.toggleVisibility.bind(this,index)} ref="visibility" checked={todo[2] ? "checked" : ""} type="checkbox" />
                 <input className="status" onChange={this.toggleToDo.bind(this,index)} ref="todoid" id={index} checked={todo[1] ? "checked" : ""} type="checkbox" />
@@ -201,7 +201,7 @@ var TodayList = React.createClass({
             if(todo[3] >= date){
             return (
               
-              <div id={"todo"+index} className={"todo clearfix tlist" + (todo[2] ? "archived " : "") + (todo[1] ? "done" : "")}>
+              <div id={"todo"+index} className={"todo clearfix tlist " + (todo[2] ? "archived " : "") + (todo[1] ? "done" : "")}>
                 <input className="visibility" onChange={this.toggleVisibility.bind(this,index)} ref="visibility" checked={todo[2] ? "checked" : ""} type="checkbox" />
                 <input className="status" onChange={this.toggleToDo.bind(this,index)} ref="todoid" id={index} checked={todo[1] ? "checked" : ""} type="checkbox" />
                 <label htmlFor={index}><span className={todo[1] ? "strikethrough" : ""}>{todo[0]}{todo[1]}{todo[2]}</span><div className="right">{todo[3]}</div></label>
