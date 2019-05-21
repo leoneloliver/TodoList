@@ -192,18 +192,20 @@ body section .visibility_control label {
 
 .add-news {
   height: 200px;
-  width: 300px;
+  width: 350px;
   position: absolute;
   left: 50%;
-  margin-left: -150px;
+  margin-left: -175px;
   top: 30%;
-  margin-top: -150px;
+  margin-top: -175px;
   border: 1px solid #000;
   text-align: center;
   padding: 0.5em;
   font-size: 0.9em;
   background: #fff;
   z-index: 9;
+  border-radius: 6px;
+  box-shadow: 1px 1px 12px 2px #696969;
   display: none;
 }
 
@@ -217,14 +219,15 @@ input.input-text-task {
 .task-box {
   padding: 8px;
 }
-.btn-add{
+.btn-add {
   width: 100%;
   border: none;
-  background: #2b9dff;
+  background: #00b70e;
   color: #fff;
   padding: 5px;
   cursor: pointer;
-  
+  border-radius: 5px;
+  text-transform: capitalize;
 }
 .todo{
   border: 1px solid #ccc;
@@ -244,6 +247,9 @@ input.input-text-task {
   color: #2b9dff;
   font-size: 1em;
 }
+.text-left{
+  text-align: left;
+}
 /* Keyframes for initial animation */
 @keyframes strikethrough {
   from {
@@ -253,3 +259,18 @@ input.input-text-task {
     transform: scaleX(1);
   }
 }
+
+
+@media only screen and (max-width: 350px) {
+  .add-new {
+    width: 98%;
+    margin-top: 0 !important;
+    margin-left: -2px !important;
+    margin-right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+

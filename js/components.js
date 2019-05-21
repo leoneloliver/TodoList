@@ -97,7 +97,7 @@ var AddNew = React.createClass({
         <div className="task-box">
           <input type="text"  ref='addNew' placeholder="Add New Task" className="input-text-task"/>
         </div>
-        <div className="task-box">
+        <div className="task-box text-left">
            Due date: <input id="dates" type="date"  ref='dateNew' className="input-date-task"/>
         </div>
         <div className="task-box">
