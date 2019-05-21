@@ -131,7 +131,7 @@ var OverdueList = React.createClass({
     },2000);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
-        <h1>Overdue</h1><span id="qolist"></span>
+        <h1>Overdue - <span id="qolist"></span> Tasks</h1>
         {
           this.props.todos.map(function(todo,index){
             var today = new Date();
@@ -184,7 +184,7 @@ var TodayList = React.createClass({
     },2000);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
-        <h1>Today</h1><span id="qtlist"></span>
+        <h1>Today - <span id="qtlist"></span> Tasks</h1>
         {
           this.props.todos.map(function(todo,index){          
             var today = new Date();
