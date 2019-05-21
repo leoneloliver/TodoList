@@ -34,12 +34,7 @@ var ToDoList = React.createClass({
         ];
       }
     } catch(e){
-      // return [
-      //   ['Buy New Monitor',true,false],
-      //   ['Start Design Phase',false,true],
-      //   ['Book Domain Name',true,false],
-      //   ['Start Development',false,false]
-      // ];
+      console.log('error');
     }
   },
   setTodos:function(){
@@ -145,8 +140,7 @@ var OverdueList = React.createClass({
                  <input className="status" onChange={this.toggleToDo.bind(this,index)} ref="todoid" id={index} checked={todo[1] ? "checked" : ""} type="checkbox" />
                 <label htmlFor={index}><span className={todo[1] ? "strikethrough" : ""}>{todo[0]}{todo[1]}{todo[2]}</span><div className="right">{todo[3]}</div></label>
               </div>
-           
-              
+                       
               );
             }
             
