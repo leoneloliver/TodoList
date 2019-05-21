@@ -70,7 +70,9 @@ body section .add-new input {
   box-sizing: border-box;
 }
 body section .listbox {
-  margin-top: 20px;
+  margin-top: 0;
+  padding: 10px;
+  background: #eaeaea;
 }
 body section .listbox.hide_archived .todo.archived {
   display: none;
@@ -79,7 +81,7 @@ body section .listbox .todo {
   padding: 15px 10px;
 }
 body section .listbox .todo:hover {
-  background: #eaeaea;
+  background: #efefef;
 }
 body section .listbox .todo .right {
   float: right;
@@ -191,14 +193,12 @@ body section .visibility_control label {
 }
 
 .add-news {
-  height: 200px;
   width: 350px;
   position: absolute;
   left: 50%;
   margin-left: -175px;
   top: 30%;
   margin-top: -175px;
-  border: 1px solid #000;
   text-align: center;
   padding: 0.5em;
   font-size: 0.9em;
@@ -224,7 +224,7 @@ input.input-text-task {
   border: none;
   background: #00b70e;
   color: #fff;
-  padding: 5px;
+  padding: 8px;
   cursor: pointer;
   border-radius: 5px;
   text-transform: capitalize;
@@ -234,11 +234,12 @@ input.input-text-task {
   border-radius: 20px;
   box-shadow: 1px 3px 4px #c5c5c5;
   margin-bottom: 12px;
+  background: #fff;
 }
 .btn-plus {
   width: 45px;
-  margin: -130px auto;
-  background: #e6e6e6;
+  margin: -140px auto;
+  background: #fff;
   height: 45px;
   text-align: center;
   border-radius: 50px;
