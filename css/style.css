@@ -99,7 +99,7 @@ body section .listbox .todo label {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   font-size: 0.9em;
-  font-weight: 100;
+  font-weight: 500;
 }
 body section .listbox .todo label:before {
   content: '';
