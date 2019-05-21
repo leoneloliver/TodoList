@@ -30,8 +30,7 @@
 /* close commented backslash hack */
 body {
   background: #F0EFE9;
-  font-family: 'Quicksand', sans-serif;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
 }
 body section {
