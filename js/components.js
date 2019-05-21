@@ -108,7 +108,7 @@ var AddNew = React.createClass({
            Due date: <input id="dates" type="date"  ref='dateNew' className="input-date-task"/>
         </div>
  
-        <input type="button" onClick={this.handleKeyPress} value="add" class="btn-add" />
+        <input type="button" onClick={this.handleKeyPress} value="add" className="btn-add" />
       </div>
     );
   }

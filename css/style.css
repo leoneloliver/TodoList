@@ -203,6 +203,7 @@ body section .visibility_control label {
   padding: 0.5em;
   font-size: 0.9em;
   background: #fff;
+  z-index: 9;
 }
 
 input.input-text-task {
