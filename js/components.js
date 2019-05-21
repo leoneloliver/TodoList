@@ -76,7 +76,6 @@ var AddNew = React.createClass({
   handleKeyPress:function(evt){
     if(this.refs.addNew.value.trim().length > 0 && this.refs.dateNew.value.trim().length > 0){
       this.props.addtodo(this.refs.addNew.value);  
-      console.log("inserting: "+this.refs.addNew.value);
       document.getElementById('add-container').style.display = "none";
       this.refs.addNew.value = '';
     }
@@ -179,5 +178,5 @@ var TodayList = React.createClass({
 });
 ReactDOM.render(
   <ToDoList/>,
-  document.getElementById('todolist')
+  document.querySelector("component-todo")
 );
