@@ -125,13 +125,9 @@ var OverdueList = React.createClass({
   toggleToDo:function(i){
     this.props.toggle(i);
   },
-  getQuantity: function(){
-    alert(document.getElementsByClassName("qlist").length);
-  },
-  
   render:function(){
     setTimeout(function(){
-      this.getQuantity();
+      alert(document.getElementsByClassName("qlist").length);
     },2000);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
