@@ -201,8 +201,29 @@ body section .visibility_control label {
   border: 1px solid #000;
   text-align: center;
   padding: 0.5em;
+  font-size: 0.9em;
+  background: #fff;
 }
 
+input.input-text-task {
+  width: 100%;
+  height: 48px;
+  font-size: 0.9em;
+  padding: 2px 12px;
+  box-sizing: border-box;
+}
+.task-box {
+  padding: 8px;
+}
+.btn-add{
+  width: 100%;
+  border: none;
+  background: #02ca08;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  
+}
 
 /* Keyframes for initial animation */
 @keyframes strikethrough {

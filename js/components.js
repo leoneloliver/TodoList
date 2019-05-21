@@ -93,23 +93,22 @@ var AddNew = React.createClass({
       this.props.addtodo(this.refs.addNew.value);
       
       alert(this.refs.addNew.value);
+      document.getElementById('add-container').classList.add("mystyle");
       this.refs.addNew.value = '';
     }
   },
   render:function(){
     return (
-      <div className="add-news">
+      <div className="add-news" id="add-container">
+        <h5>Add Task</h5>
         <div className="task-box">
           <input type="text"  ref='addNew' placeholder="Add New Task" className="input-text-task"/>
         </div>
         <div className="task-box">
            Due date: <input id="dates" type="date"  ref='dateNew' className="input-date-task"/>
         </div>
-        
-
-        
-        
-        <input type="button" onClick={this.handleKeyPress} value="add" />
+ 
+        <input type="button" onClick={this.handleKeyPress} value="add" class="btn-add" />
       </div>
     );
   }
