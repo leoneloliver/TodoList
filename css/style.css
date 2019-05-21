@@ -235,6 +235,9 @@ input.input-text-task {
   border-radius: 5px;
   text-transform: capitalize;
 }
+.btn-add:hover{
+  background: #029c0e;
+}
 .todo{
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -255,6 +258,7 @@ input.input-text-task {
   padding-top: -6px;
   padding-top: 14px;
   padding-bottom: 12px;
+  box-shadow: 1px 1px 2px 2px #c5c5c5
 }
 .text-left{
   text-align: left;
