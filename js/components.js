@@ -66,7 +66,7 @@ var ToDoList = React.createClass({
   },
   handleOpen:function(){
     alert();
-  }
+  },
   render:function(){
     var dt = new Date();
     return (
