@@ -64,6 +64,9 @@ var ToDoList = React.createClass({
       hide_archived : !this.state.hide_archived
     });
   },
+  handleOpen:function(){
+    alert();
+  }
   render:function(){
     var dt = new Date();
     return (
@@ -81,6 +84,9 @@ var ToDoList = React.createClass({
         <AddNew addtodo={this.handleKeyPress} />
           <TodayList todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
           <OverdueList todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
+          <div onClick={this.handleOpen}>
+            Add new +
+          </div>
         </div>
     );
   }
@@ -93,7 +99,7 @@ var AddNew = React.createClass({
       this.props.addtodo(this.refs.addNew.value);
       
       alert(this.refs.addNew.value);
-      document.getElementById('add-container').classList.add("mystyle");
+      document.getElementById('add-container').style.display = "none";
       this.refs.addNew.value = '';
     }
   },
@@ -116,6 +122,7 @@ var AddNew = React.createClass({
     );
   }
 });
+
 
 var OverdueList = React.createClass({
   show_hide_archived:function(){
