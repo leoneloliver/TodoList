@@ -44,7 +44,6 @@ var ToDoList = React.createClass({
     this.setTodos();
   },
   handleKeyPress:function(item){
-    
     var dateInput = document.getElementById('dates').value;
     var newtodo = new Array(item,false,false,dateInput);
     this.state.todos.push(newtodo);
@@ -135,9 +134,11 @@ var OverdueList = React.createClass({
     this.props.toggleVisibility(i);
   },
   render:function(){
+    var olist = document.getElementsByClassName("olist").length;
+    console.log(olist);
     return (
-      <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
-        <h1>Overduo</h1>
+      <div className={"listbox olist" + (this.props.hide_archived? "hide_archived" : "")}>
+        <h1>Overduo</h1> {olist}
         {
           this.props.todos.map(function(todo,index){
             var today = new Date();
@@ -153,7 +154,7 @@ var OverdueList = React.createClass({
               <div id={"todo"+index} className={"todo clearfix " + (todo[2] ? "archived " : "") + (todo[1] ? "done" : "")}>
                 
                 <input className="visibility" onChange={this.toggleVisibility.bind(this,index)} ref="visibility" checked={todo[2] ? "checked" : ""} type="checkbox" />
-                 <input className="status" onChange={this.toggleToDo.bind(this,index)} ref="todoid" id={index} checked={todo[1] ? "checked" : ""} type="checkbox" />
+                <input className="status" onChange={this.toggleToDo.bind(this,index)} ref="todoid" id={index} checked={todo[1] ? "checked" : ""} type="checkbox" />
                 <label htmlFor={index}><span className={todo[1] ? "strikethrough" : ""}>{todo[0]}{todo[1]}{todo[2]}</span><div className="right">{todo[3]}</div></label>
               </div>
                        
@@ -186,7 +187,7 @@ var TodayList = React.createClass({
   },
   render:function(){
     return (
-      <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
+      <div className={"listbox tlist" + (this.props.hide_archived? "hide_archived" : "")}>
         <h1>Today</h1>
         {
           this.props.todos.map(function(todo,index){          
