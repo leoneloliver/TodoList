@@ -106,7 +106,7 @@ var OverdueList = React.createClass({
   },
   render:function(){
     setTimeout(function(){
-      var elem = document.getElementsByClassName("tlist");
+      var elem = document.getElementsByClassName("olist");
       let nOver = 0
       for(let i = 0; i < elem.length ; i++){
         if(elem[i].checked == false){
