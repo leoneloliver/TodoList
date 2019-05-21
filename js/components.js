@@ -84,9 +84,8 @@ var ToDoList = React.createClass({
         <div className="dayinword">{dt.toLocaleString('en-us',{weekday:'long'}).toUpperCase()}</div>
       </header>
         <AddNew addtodo={this.handleKeyPress} />
-        <List todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
-        
-        <List2 todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
+          <TodayList todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
+          <OverdueList todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
         </div>
     );
   }
@@ -114,7 +113,7 @@ var AddNew = React.createClass({
   }
 });
 
-var List = React.createClass({
+var OverdueList = React.createClass({
   show_hide_archived:function(){
     this.props.show_hide_archived();
   },
@@ -162,7 +161,7 @@ var List = React.createClass({
 
 
 
-var List2 = React.createClass({
+var TodayList = React.createClass({
   show_hide_archived:function(){
     this.props.show_hide_archived();
   },
@@ -191,9 +190,8 @@ var List2 = React.createClass({
             return (
               
               <div id={"todo"+index} className={"todo clearfix " + (todo[2] ? "archived " : "") + (todo[1] ? "done" : "")}>
-                <h1>True</h1>
                 <input className="visibility" onChange={this.toggleVisibility.bind(this,index)} ref="visibility" checked={todo[2] ? "checked" : ""} type="checkbox" />
-                 <input className="status" onChange={this.toggleToDo.bind(this,index)} ref="todoid" id={index} checked={todo[1] ? "checked" : ""} type="checkbox" />
+                <input className="status" onChange={this.toggleToDo.bind(this,index)} ref="todoid" id={index} checked={todo[1] ? "checked" : ""} type="checkbox" />
                 <label htmlFor={index}><span className={todo[1] ? "strikethrough" : ""}>{todo[0]}{todo[1]}{todo[2]}</span><div className="right">{todo[3]}</div></label>
               </div>
            
