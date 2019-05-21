@@ -149,6 +149,14 @@ var TodayList = React.createClass({
   render:function(){
     setTimeout(function(){
       document.getElementById("qtlist").innerHTML = document.getElementsByClassName("tlist").length;
+      var checked = document.getElementsByClassName("tlist").length;
+      let j = 0
+      for(let i = 1; i < checked ; i++){
+        if(document.getElementsByClassName("tlist").checked == false){
+          j++;
+        }
+      }
+      console.log('total:'+ j);
     },500);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
