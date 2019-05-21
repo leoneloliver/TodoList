@@ -127,11 +127,11 @@ var OverdueList = React.createClass({
   },
   render:function(){
     setTimeout(function(){
-      alert(document.getElementsByClassName("olist").length);
+      document.getElementById("qolist").innerHTML = document.getElementsByClassName("olist").length;
     },2000);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
-        <h1>Overdue</h1><span className="qolist"></span>
+        <h1>Overdue</h1><span id="qolist"></span>
         {
           this.props.todos.map(function(todo,index){
             var today = new Date();
@@ -179,9 +179,12 @@ var TodayList = React.createClass({
     this.props.toggle(i);
   },
   render:function(){
+    setTimeout(function(){
+      document.getElementById("qtlist").innerHTML = document.getElementsByClassName("tlist").length;
+    },2000);
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
-        <h1>Today</h1><span className="qtlist"></span>
+        <h1>Today</h1><span id="qtlist"></span>
         {
           this.props.todos.map(function(todo,index){          
             var today = new Date();
