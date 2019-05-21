@@ -66,7 +66,7 @@ var ToDoList = React.createClass({
       <div>
       <header className="clearfix">
         <h4>My To Do APP</h4>
-        <div className="dayinword">{dt.toLocaleString('en-us',{weekday:'long'}).toUpperCase()}</div>
+       
       </header>
         <AddNew addtodo={this.handleKeyPress} />
           <TodayList todos = {this.state.todos} hide_archived={this.state.hide_archived} toggle={this.toggle} toggleVisibility={this.toggleVisibility} show_hide_archived={this.show_hide_archived} />
