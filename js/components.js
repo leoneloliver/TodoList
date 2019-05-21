@@ -13,8 +13,7 @@ var ToDoList = React.createClass({
   },
   getQuantity: function(){
     alert(document.getElementsByClassName("olist").length);
-  }
-  
+  },
   getInitialState:function(){
     var localtodos = this.getTodos();
     this.getQuantity();
