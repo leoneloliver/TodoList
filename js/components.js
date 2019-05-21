@@ -62,17 +62,10 @@ var ToDoList = React.createClass({
     document.getElementById('add-container').style.display = "block";
   },
   render:function(){
-    var dt = new Date();
     return (
       <div>
       <header className="clearfix">
-        <div className="date">
-          <div className="day">{dt.getDate()}</div>
-          <span>
-            <p className="month">{dt.toLocaleString('en-us',{month:"short"}).toUpperCase()}</p>
-            <p className="year">{dt.getFullYear()}</p>
-          </span>
-        </div>
+        <h4>My To Do APP</h4>
         <div className="dayinword">{dt.toLocaleString('en-us',{weekday:'long'}).toUpperCase()}</div>
       </header>
         <AddNew addtodo={this.handleKeyPress} />
