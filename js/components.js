@@ -110,7 +110,7 @@ var OverdueList = React.createClass({
       let nOver = 0
       for(let i = 0; i < elem.length ; i++){
         if(elem[i].checked == false){
-          nToday++;
+          nOver++;
         }
       }
       document.getElementById("qolist").innerHTML = nOver;
