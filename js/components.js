@@ -11,12 +11,8 @@ var ToDoList = React.createClass({
     var date = today.getFullYear() + '-' + monthy + '-' + today.getDate();
     return date;
   },
-  getQuantity: function(){
-    alert(document.getElementsByClassName("olist").length);
-  },
   getInitialState:function(){
     var localtodos = this.getTodos();
-    this.getQuantity();
     return { 
       todos: localtodos,
       hide_archived:true,
@@ -129,6 +125,9 @@ var OverdueList = React.createClass({
   toggleToDo:function(i){
     this.props.toggle(i);
   },
+  getQuantity: function(){
+    alert(document.getElementsByClassName("qlist").length);
+  },
   render:function(){
     return (
       <div className={"listbox " + (this.props.hide_archived? "hide_archived" : "")}>
@@ -165,6 +164,7 @@ var OverdueList = React.createClass({
       </div>
     );
   }
+  this.getQuantity();
 });
 
 
