@@ -156,7 +156,7 @@ var OverdueList = React.createClass({
             }
             
            
-          },this, this.getQuantity();)
+          },this)
         }
         <div className="visibility_control">
           <input id="show_hide" onChange={this.show_hide_archived} checked={this.props.hide_archived ? "checked" : ""} className="togglevisibility" type="checkbox" />
@@ -164,7 +164,7 @@ var OverdueList = React.createClass({
         </div>
       </div>
     );
-    
+    this.getQuantity();
   }
   
 });
