@@ -40,6 +40,8 @@ body section {
   padding: 18px;
   border-radius: 3px;
   box-sizing: border-box;
+  margin-top: 0;
+  padding-top: 0;
 }
 body section header .date {
   display: inline-block;
