@@ -153,7 +153,10 @@ var OverdueList = React.createClass({
            
           },this)
         }
-        
+        <div className="visibility_control">
+          <input id="show_hide" onChange={this.show_hide_archived} checked={this.props.hide_archived ? "checked" : ""} className="togglevisibility" type="checkbox" />
+          <label htmlFor="show_hide">Hide archived todos</label>
+        </div>
       </div>
     );
   }
@@ -200,10 +203,7 @@ var TodayList = React.createClass({
             }
           },this)
         }
-        <div className="visibility_control">
-             <input id="show_hide" onChange={this.show_hide_archived} checked={this.props.hide_archived ? "checked" : ""} className="togglevisibility" type="checkbox" />
-          <label htmlFor="show_hide">Hide archived todos</label>
-        </div>
+        
       </div>
     );
   }
