@@ -8,25 +8,20 @@
   clear: both;
   height: 0;
 }
-
 .clearfix {
   display: inline-block;
 }
-
 * {
   outline: none;
 }
-
 /* start commented backslash hack \*/
 * html .clearfix {
   height: 1%;
   outline: none;
 }
-
 .clearfix {
   display: block;
 }
-
 /* close commented backslash hack */
 body {
   background: #fff;
@@ -222,13 +217,18 @@ body section .visibility_control label {
   box-shadow: 1px 1px 12px 2px #696969;
   display: none;
 }
-
 input.input-text-task {
   width: 100%;
   height: 48px;
   font-size: 0.9em;
   padding: 2px 12px;
   box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #a9a9a9;
+}
+.input-date-text{
+  border-radius: 5px;
+  border: 1px solid #a9a9a9;
 }
 .task-box {
   padding: 8px;
@@ -270,6 +270,7 @@ input.input-text-task {
 }
 .text-left{
   text-align: left;
+  font-size: 0.9em;
 }
 /* Keyframes for initial animation */
 @keyframes strikethrough {
