@@ -35,6 +35,13 @@ body {
 }
 h1{
   font-weight: 500;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+h4 {
+  padding-left: 12px;
+  color: #737373;
+  font-weight: 500;
 }
 body section {
   max-width: 650px;
@@ -76,7 +83,7 @@ body section .add-new input {
 body section .listbox {
   margin-top: 0;
   padding: 10px;
-  background: #eaeaea;
+  background: #f7f7f7;
 }
 body section .listbox.hide_archived .todo.archived {
   display: none;
@@ -103,7 +110,7 @@ body section .listbox .todo label {
 }
 body section .listbox .todo label:before {
   content: '';
-  border: 2px solid #2b9dff;
+  border: 2px solid #9a9a9a;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   width: 20px;
